@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Password</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Guess the Password</h1>
+    <div id="game">
+        <div id="level1" class="level">
+            <h2>Level 1</h2>
+            <p>Scroll down to find the password.</p>
+            <input type="text" id="input1" placeholder="Enter password">
+            <button onclick="checkPassword(1, 'OhMygoooooood')">Submit</button>
+            <div class="hint">Scroll down for a hint...</div>
+            <div class="password">OhMygoooooood</div>
+        </div>
+        <div id="level2" class="level hidden">
+            <h2>Level 2</h2>
+            <p>Find the password by clicking the word "password" in the title.</p>
+            <input type="text" id="input2" placeholder="Enter password">
+            <button onclick="checkPassword(2, 'oh-ho')">Submit</button>
+        </div>
+        <div id="level3" class="level hidden">
+            <h2>Level 3</h2>
+            <p>Guess the password:</p>
+            <input type="text" id="input3" placeholder="Enter password">
+            <button onclick="checkPassword(3, ':12345678')">Submit</button>
+            <div class="hint">Password: :12345678</div>
+        </div>
+        <div id="congrats" class="hidden">
+            <h2>Congratulations! You've completed all levels!</h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
