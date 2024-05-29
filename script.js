@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const title = document.getElementById('title');
     title.addEventListener('click', () => {
         if (document.getElementById('level2').classList.contains('hidden')) {
-            alert('Password: oh-ho');
+            document.getElementById('hidden-password').classList.remove('hidden');
         }
     });
 });
