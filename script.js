@@ -17,9 +17,15 @@ function checkPassword(level, correctPassword) {
     const input = document.getElementById(`input${level}`).value.toLowerCase();
     if (input === correctPassword.toLowerCase()) {
         document.getElementById(`level${level}`).classList.add('hidden');
-        if (level < 6) {
-            document.getElementById(`level${level + 1}`).classList.remove('hidden');
-        } else {
+
+        // Handle moving through levels
+        if (level === 3) {
+            document.getElementById('level4').classList.remove('hidden');
+        } else if (level === 4) {
+            document.getElementById('level5').classList.remove('hidden');
+        } else if (level === 5) {
+            document.getElementById('level6').classList.remove('hidden');
+        } else if (level === 6) {
             document.getElementById('congrats').classList.remove('hidden');
         }
     } else {
