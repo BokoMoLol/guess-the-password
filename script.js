@@ -18,15 +18,13 @@ function checkPassword(level, correctPassword) {
     if (input === correctPassword.toLowerCase()) {
         document.getElementById(`level${level}`).classList.add('hidden');
 
-        // Handle moving through levels
+        // Handle moving through levels, and skip the congrats page
         if (level === 3) {
             document.getElementById('level4').classList.remove('hidden');
         } else if (level === 4) {
             document.getElementById('level5').classList.remove('hidden');
         } else if (level === 5) {
             document.getElementById('level6').classList.remove('hidden');
-        } else if (level === 6) {
-            document.getElementById('congrats').classList.remove('hidden');
         }
     } else {
         triggerShake();
