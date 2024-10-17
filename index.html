@@ -9,18 +9,23 @@
 <body>
     <h1 id="title">Guess the Password</h1>
     <div id="game">
+        <!-- Level 1 -->
         <div id="level1" class="level">
             <h2>Level 1</h2>
             <input type="text" id="input1" placeholder="Enter password">
             <button onclick="checkPassword(1, 'OhMygoooooood')">Submit</button>
             <div class="password">OhMygoooooood</div>
         </div>
+
+        <!-- Level 2 -->
         <div id="level2" class="level hidden">
             <h2>Level 2</h2>
             <p>Enter the password.</p>
             <input type="text" id="input2" placeholder="Enter password">
             <button onclick="checkPassword(2, 'the password')">Submit</button>
         </div>
+
+        <!-- Level 3 -->
         <div id="level3" class="level hidden">
             <h2>Level 3</h2>
             <p>Guess the password:</p>
@@ -28,6 +33,53 @@
             <button onclick="checkPassword(3, ':12345678')">Submit</button>
             <div class="hint">password :12345678</div>
         </div>
+
+        <!-- Level 4 -->
+        <div id="level4" class="level hidden">
+            <h2>Level 4</h2>
+            <button onclick="openMenu()">Password Finder</button>
+            <div id="checkbox-menu" class="hidden">
+                <label><input type="checkbox" id="checkbox1" onclick="showNextCheckbox(1)"> I agree to the terms and conditions</label><br>
+                <div id="checkbox2-container" class="hidden">
+                    <label><input type="checkbox" id="checkbox2" onclick="showNextCheckbox(2)"> I totally agree</label><br>
+                </div>
+                <div id="checkbox3-container" class="hidden">
+                    <label><input type="checkbox" id="checkbox3" onclick="showNextCheckbox(3)"> I definitely agree</label><br>
+                </div>
+                <div id="checkbox4-container" class="hidden">
+                    <label><input type="checkbox" id="checkbox4" onclick="showNextCheckbox(4)"> I promise I agree</label><br>
+                </div>
+                <div id="checkbox5-container" class="hidden">
+                    <label><input type="checkbox" id="checkbox5" onclick="showNextCheckbox(5)"> I definitely promise I agree</label><br>
+                </div>
+                <div id="checkbox6-container" class="hidden">
+                    <label><input type="checkbox" id="checkbox6"> I don't not agree</label><br>
+                </div>
+                <div id="checkbox7-container" class="hidden">
+                    <label><input type="checkbox" id="checkbox7"> I obviously don't not not agree</label><br>
+                </div>
+                <button onclick="confirmCheckbox()">Confirm</button>
+            </div>
+        </div>
+
+        <!-- Level 5 -->
+        <div id="level5" class="level hidden">
+            <h2>Level 5</h2>
+            <p>Enter password</p>
+            <input type="text" id="input5" placeholder="Enter password">
+            <button onclick="checkPasswordLevel5()">Submit</button>
+        </div>
+
+        <!-- Level 6 -->
+        <div id="level6" class="level hidden">
+            <h2>Level 6</h2>
+            <p>Drag the submit button to reveal the password</p>
+            <input type="text" id="input6" placeholder="Enter password">
+            <button id="draggable-submit" draggable="true" ondragend="revealPassword()">Submit</button>
+            <div id="hidden-password" class="hidden">emotionaldamage69420</div>
+        </div>
+
+        <!-- Congratulations -->
         <div id="congrats" class="hidden">
             <h2>Congratulations! You've completed all levels!</h2>
         </div>
